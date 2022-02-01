@@ -28,13 +28,11 @@ public class pessoaService {
 	}
 
 	public void deletarPorId(Integer id) {
-		//não criamos o controller do delete..Kkkkkkkkkkkkkkkkkk
+		
 		 PessoaRepository.deleteById( id);
 	}
 	
-	/* vamos começar pelo service agora, já que não temos nada pra fazer no repository, simbora?*/
+	
 
 }
-/*
- * ainda estou aprendendo a ensinar, não costumo ensinar programação pras pessoa
- */
+
