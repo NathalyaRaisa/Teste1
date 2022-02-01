@@ -21,15 +21,12 @@ import com.teste.service.pessoaService;
 public class pessoaController {
 
 	@Autowired
-	pessoaRepository PessoaRepository; /*
-										 * caso vc não queria ir pelo service, tem essa forma (errada) de fazer, indo
-										 * direto no repository
-										 */
+	pessoaRepository PessoaRepository; 
 
 	@Autowired
 	pessoaService PessoaService;
 
-	@PostMapping("/salvar") // aqui poderia ser save
+	@PostMapping("/salvar") 
 	public pessoa salvar(@RequestBody pessoa Pessoa) {
 		return PessoaService.salvar(Pessoa);
 	}
@@ -46,15 +43,11 @@ public class pessoaController {
 
 	@DeleteMapping("/delete")
 	public void deletarPorId(@RequestParam Integer id) {
-		// não era agora né? aqui vc coloca o nome q vc quiser, ta certo, aqui embaixo
-		// retorna? não, aqui vamos chamar o service sem o return
-		PessoaService.deletarPorId(id); // ta certo? ta sim, simbora pro postman
+		
+		PessoaService.deletarPorId(id); 
 
 	}
 
-	/*
-	 * vamos usar o @RequestParam Integer id para receber o Id, e vamos apontar para
-	 * o service pra função que fizermos agora q eu não lembro o nome
-	 */
+	
 
 }
